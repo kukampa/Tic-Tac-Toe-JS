@@ -1,5 +1,7 @@
 const main = document.querySelectorAll('.active-box');
 const result = document.querySelector('.result');
+const timer = document.querySelector('.timer');
+const gameEnd = document.querySelector('.game-end');
 start(main);
 
 function start(main) {
@@ -13,14 +15,18 @@ function start(main) {
                 }, 100);
                 setTimeout(function removeRed() {
                     cell.classList.remove('red');
-                }, 2000);
+                }, 800);
             } else {
                 this.textContent = ['X', 'O'][i % 2];
 
                 if(isVictory(main)) {
-                    alert(this.textContent);
+                    result.textContent = this.textContent;
+                    gameEnd.classList.add('display-block');
+                    setTimeout(() => {
+                        location = location.href
+                    }, 5000);
                 } else if(i == 8) {
-                    alert('DRAW (');
+                    result.textContent = 'DRAW'
                 }
 
                 i++;

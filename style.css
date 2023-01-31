@@ -11,10 +11,11 @@ button {
 
 body {
     background: #d6d9ff;
-    padding-top: 250px;
+    padding-top: 210px;
 }
 
 .main-box {
+    position: relative;
     width: 300px;
     height: 300px;
     background: #d6d9ff;
@@ -57,5 +58,36 @@ body {
 
 .red {
     background: rgb(251, 197, 197);
+}
+
+.result {
+    position: absolute;
+    top: 120px;
+    left: 49%;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.game-end {
+    background: rgba(0, 0, 0, 0.584);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    font-weight: bold;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 25px;
+    display: none;
+}
+
+.display-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
